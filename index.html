@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lovelady High School - Schedule & Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="clock-section">
+            <div class="current-time" id="currentTime">00:00:00</div>
+            <div class="current-date" id="currentDate">Loading...</div>
+        </header>
+
+        <div class="theme-selector">
+            <h3>Theme:</h3>
+            <div id="themeSwitcher" class="theme-buttons"></div>
+        </div>
+
+        <div class="main-content">
+            <aside class="bell-schedule">
+                <h2>Bell Schedule</h2>
+                <div id="scheduleSelector" class="schedule-selector"></div>
+                <div id="scheduleContainer" class="schedule-list"></div>
+            </aside>
+
+            <main class="countdown-section">
+                <h1 class="page-title">School Event Countdowns</h1>
+                
+                <div class="events-section">
+                    <h2 class="section-title">Upcoming Events</h2>
+                    <div id="upcomingEvents" class="countdowns-container"></div>
+                </div>
+
+                <div id="pastEventsSection" class="events-section" style="display: none;">
+                    <h2 class="section-title">Past Events</h2>
+                    <div id="pastEvents" class="past-events-container"></div>
+                </div>
+            </main>
+        </div>
+
+        <footer class="custom-color-section">
+            <h3>Custom Accent Color:</h3>
+            <div class="color-picker-container">
+                <input type="color" id="colorPicker" value="#00ff88">
+                <label for="colorPicker">Pick your highlight color</label>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
