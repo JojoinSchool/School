@@ -192,21 +192,19 @@ function switchSchedule(scheduleKey) {
 
 function updateClock() {
     const now = new Date();
-    // Pad milliseconds to 3 digits
-    const ms = now.getMilliseconds().toString().padStart(3, '0');
-    
-    // Include seconds and milliseconds
-    const timeString = `${now.getHours().toString().padStart(2, '0')}:`
-        + `${now.getMinutes().toString().padStart(2, '0')}:`
-        + `${now.getSeconds().toString().padStart(2, '0')}.`
-        + ms;
-    
-    const dateString = now.toLocaleDateString('en-US', {
+    const timeString = now.toLocaleTimeString('en-US', { 
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    });
+    const dateString = now.toLocaleDateString('en-US', { 
         weekday: 'long',
         year: 'numeric',
         month: 'long',
         day: 'numeric'
     });
+    
     document.getElementById('currentTime').textContent = timeString;
     document.getElementById('currentDate').textContent = dateString;
 }
